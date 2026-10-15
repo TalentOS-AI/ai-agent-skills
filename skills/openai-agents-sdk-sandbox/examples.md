@@ -1,5 +1,7 @@
 # Examples: openai-agents-sdk-sandbox
 
+> 注：以下为示例，未经实测。 Examples only — not yet run end-to-end.
+
 Needs Python, `pip install openai-agents`, and an `OPENAI_API_KEY` in your own environment. Sandbox is beta, so pin the SDK version and check the [docs](https://openai.github.io/openai-agents-python/) before running.
 
 ## Example 1: Summarize a README inside a sandbox workspace

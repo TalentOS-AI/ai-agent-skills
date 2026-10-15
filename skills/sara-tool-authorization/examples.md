@@ -1,5 +1,7 @@
 # Examples: sara-tool-authorization
 
+> 注：以下为示例，未经实测。 Examples only — not yet run end-to-end.
+
 Each example can be followed with any tool-using agent that has this skill loaded. Use test accounts and fake data only.
 
 ## Example 1: Injected forward request in an email (design review)

@@ -13,7 +13,6 @@ description: >-
 - Title: OpenAI Agents SDK (Python) — openai/openai-agents-python
 - Link: https://github.com/openai/openai-agents-python
 - Docs: https://openai.github.io/openai-agents-python/
-- Stars (approx., from GitHub page at skill authoring): ~29.5k
 - One-line gist: A lightweight multi-agent runtime where an Agent is instructions + tools + guardrails + handoffs; SandboxAgent adds an isolated mutable workspace for long-horizon file/shell work; MCP and Realtime plug into the same mental model.
 
 ## When to use / when NOT to use
@@ -136,4 +135,3 @@ Transports: HostedMCPTool (Responses-side), Streamable HTTP, SSE (legacy), stdio
 - Repo README core concepts (Agents, Sandbox agents, Realtime, handoffs, tools/MCP, guardrails, HITL, sessions, tracing): https://github.com/openai/openai-agents-python (accessed 2026-09-16).
 - Sandbox concepts (beta, Manifest, SandboxRunConfig, capabilities, handoff vs as_tool turn accounting): https://openai.github.io/openai-agents-python/sandbox/guide/
 - Agents, guardrails, handoffs, MCP guides on the same docs site (accessed 2026-09-16).
-- Star count ~29.5k from the GitHub repository page at authoring time — re-check before citing precisely.

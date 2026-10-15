@@ -1,5 +1,7 @@
 # Examples: state-path-tool-menus
 
+> 注：以下为示例，未经实测。 Examples only — not yet run end-to-end.
+
 Both examples work on paper or with a small script over your tool schemas. Numbers in SKILL.md (ToolBench 0.737 → 0.898; 32 vs 128 tools) are paper-reported and do not carry over to your stack; measure your own.
 
 ## Example 1: Receipt email with only an order_id
