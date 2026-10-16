@@ -19,7 +19,7 @@ Reusable Agent Skills distilled from papers and open-source repos, focused on ha
 Copy a skill folder into your agent's skills directory, for example:
 
 ```bash
-git clone https://github.com/JimmyWangJimmy/ai-agent-skills.git
+git clone https://github.com/TalentOS-AI/ai-agent-skills.git
 cp -r ai-agent-skills/skills/sara-tool-authorization <your-agent>/skills/
 ```
 
@@ -82,3 +82,8 @@ The `description` field in the frontmatter is what the agent uses to decide when
 ### 许可证
 
 [MIT](./LICENSE)。Skill 文本可自由复用，论文与仓库的权利归原作者，使用时请注明来源。
+
+
+---
+
+Maintained by [TalentOS](https://www.agentbay.asia) · 需要定制 Agent / 技能开发？[找我们定制 / Work with us](https://www.agentbay.asia/contact) · talentos@agentbay.asia
