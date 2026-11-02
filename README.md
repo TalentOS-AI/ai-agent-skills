@@ -4,7 +4,7 @@
 
 ## English
 
-Reusable Agent Skills distilled from papers and open-source repos, focused on hands-on AI agent engineering: authorization, tooling, and workflows. Each skill is a folder with a `SKILL.md` (YAML frontmatter + recipe) and an `examples.md` (runnable / follow-along usage examples with acceptance checks).
+Reusable Agent Skills distilled from papers and open-source repos, covering AI agent engineering (authorization, tooling, workflows) and research / academic workflows (papers, citations, figures, literature). Each skill is a folder with a `SKILL.md` (YAML frontmatter + recipe) and an `examples.md` (runnable / follow-along usage examples with acceptance checks).
 
 ### Skills
 
@@ -13,6 +13,26 @@ Reusable Agent Skills distilled from papers and open-source repos, focused on ha
 | [sara-tool-authorization](./skills/sara-tool-authorization/) | [arXiv:2608.27146](https://arxiv.org/abs/2608.27146) | Stop untrusted tool outputs (email, web, MCP results) from silently becoming permission to act. |
 | [openai-agents-sdk-sandbox](./skills/openai-agents-sdk-sandbox/) | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | Build multi-agent workflows with the OpenAI Agents SDK: SandboxAgent, MCP, guardrails, handoffs, Realtime. |
 | [state-path-tool-menus](./skills/state-path-tool-menus/) | [arXiv:2609.09395](https://arxiv.org/abs/2609.09395) | For large tool/MCP libraries, build an ordered, executable tool menu (producers before consumers) instead of relevance-only retrieval. |
+
+### Research / academic skills
+
+| Skill | Source | One-line purpose |
+|---|---|---|
+| [acl-latex-paper](./skills/acl-latex-paper/) | Iris / TalentOS | Write/compile ACL-family LaTeX papers (template, anonymity, page limits, compile checks). |
+| [acl-paper-figures](./skills/acl-paper-figures/) | [alphaXiv/OpenResearch orx-figures](https://github.com/alphaXiv/OpenResearch) (MIT, adapted) | Build print-size ACL/two-column matplotlib figures (Okabe-Ito, greyscale-safe) with audit helpers. |
+| [annotation-project](./skills/annotation-project/) | Iris / TalentOS | Design labeled datasets: scheme, guidelines, IAA, LLM pre-annotation, data statement/licensing. |
+| [citation-audit](./skills/citation-audit/) | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) (MIT, adapted) | Audit every bibliography entry for reality, attribution, and claim support (MBA/CSSCI-aware). |
+| [citation-verification](./skills/citation-verification/) | Iris / TalentOS | Resolve every citation against DOI/Crossref/Anthology/arXiv before sharing refs. |
+| [deslop](./skills/deslop/) | [stephenturner/skill-deslop](https://github.com/stephenturner/skill-deslop) (MIT, adapted) | Strip AI writing tells and defensive hedging from academic prose (EN + Chinese journal extras). |
+| [literature-review](./skills/literature-review/) | Iris / TalentOS | Systematic literature search protocol, multi-source querying, snowballing, review matrix. |
+| [openalex](./skills/openalex/) | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) (MIT, adapted) | Search OpenAlex for works, citation counts, affiliations, funding, DOI metadata via public API. |
+| [rebuttal-letter](./skills/rebuttal-letter/) | Iris / TalentOS | Structure conference rebuttals / journal response-to-reviewers letters. |
+| [research-skill-router](./skills/research-skill-router/) | Iris / TalentOS | Route research tasks to the right local skill; install external MIT/Apache skills on demand. |
+| [scientific-visualization](./skills/scientific-visualization/) | [K-Dense-AI](https://github.com/K-Dense-AI/scientific-agent-skills) (MIT) | Post-figure QA: palette/contrast audit, PDF metadata, export planning. |
+| [scipilot-figure-skill](./skills/scipilot-figure-skill/) | [Haojae/scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill) (MIT) | Chart-type advice and viz anti-pattern checklist. |
+| [semantic-scholar](./skills/semantic-scholar/) | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) (MIT, adapted) | Search Semantic Scholar for published venue papers with citations/TLDR via public API. |
+| [venue-deadlines](./skills/venue-deadlines/) | Iris / TalentOS | Track official CFP deadlines (AoE conversion) and sourced acceptance rates. |
+
 
 ### Install
 
@@ -36,7 +56,8 @@ The `description` field in the frontmatter is what the agent uses to decide when
 └── skills/
     └── <skill-name>/
         ├── SKILL.md           # the skill itself
-        └── examples.md        # usage examples + acceptance checks
+        ├── examples.md        # usage examples + acceptance checks (engineering skills)
+        └── …                  # research skills may ship helpers/scripts/references instead
 ```
 
 ### Contributing
@@ -53,7 +74,7 @@ The `description` field in the frontmatter is what the agent uses to decide when
 
 ## 中文
 
-从论文和开源仓库提炼出的可复用 Agent Skill，聚焦 AI Agent 实操：授权、工具和工作流。每个 skill 是一个文件夹，内含 `SKILL.md`（YAML 头 + 做法）和 `examples.md`（可运行或可照做的示例与验收要点）。
+从论文和开源仓库提炼出的可复用 Agent Skill，覆盖 AI Agent 实操（授权、工具、工作流）与科研/学术流程（论文、引用、作图、文献）。每个 skill 是一个文件夹，内含 `SKILL.md`（YAML 头 + 做法）和 `examples.md`（可运行或可照做的示例与验收要点）。
 
 ### Skill 列表
 
@@ -62,6 +83,26 @@ The `description` field in the frontmatter is what the agent uses to decide when
 | [sara-tool-authorization](./skills/sara-tool-authorization/) | [arXiv:2608.27146](https://arxiv.org/abs/2608.27146) | 防止邮件、网页、MCP 返回等不可信工具输出悄悄变成执行授权。 |
 | [openai-agents-sdk-sandbox](./skills/openai-agents-sdk-sandbox/) | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | 用 OpenAI Agents SDK 搭多 Agent 工作流：SandboxAgent、MCP、guardrail、handoff、Realtime。 |
 | [state-path-tool-menus](./skills/state-path-tool-menus/) | [arXiv:2609.09395](https://arxiv.org/abs/2609.09395) | 工具/MCP 很多时，按可执行路径排工具菜单（生产者在前、消费者在后），而不是只按相关度检索。 |
+
+### 科研 / 学术 skill
+
+| Skill | 来源 | 一句话用途 |
+|---|---|---|
+| [acl-latex-paper](./skills/acl-latex-paper/) | Iris / TalentOS | 撰写与编译 ACL 系 LaTeX 论文（模板、匿名、页限、编译检查）。 |
+| [acl-paper-figures](./skills/acl-paper-figures/) | [alphaXiv/OpenResearch orx-figures](https://github.com/alphaXiv/OpenResearch)（MIT，改编） | 按 ACL/双栏印刷尺寸做 matplotlib 图（Okabe-Ito、灰度安全）并自检。 |
+| [annotation-project](./skills/annotation-project/) | Iris / TalentOS | 标注数据集：方案、指南、一致性、LLM 预标、数据说明与许可。 |
+| [citation-audit](./skills/citation-audit/) | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（MIT，改编） | 逐条核验参考文献是否真实、归因正确、支撑主张（兼顾 MBA/CSSCI）。 |
+| [citation-verification](./skills/citation-verification/) | Iris / TalentOS | 分享参考文献前用 DOI/Crossref/Anthology/arXiv 解析每条引用。 |
+| [deslop](./skills/deslop/) | [stephenturner/skill-deslop](https://github.com/stephenturner/skill-deslop)（MIT，改编） | 去掉学术文风里的 AI 套话与防御性表述（含中文期刊补充）。 |
+| [literature-review](./skills/literature-review/) | Iris / TalentOS | 系统文献检索：多源查询、滚雪球、综述矩阵。 |
+| [openalex](./skills/openalex/) | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（MIT，改编） | 用 OpenAlex 公开 API 查论文、引用、机构、资助与 DOI 元数据。 |
+| [rebuttal-letter](./skills/rebuttal-letter/) | Iris / TalentOS | 组织会议 rebuttal / 期刊回复审稿意见信。 |
+| [research-skill-router](./skills/research-skill-router/) | Iris / TalentOS | 把科研任务路由到合适本地 skill；按需安装外部 MIT/Apache skill。 |
+| [scientific-visualization](./skills/scientific-visualization/) | [K-Dense-AI](https://github.com/K-Dense-AI/scientific-agent-skills)（MIT） | 成图后质检：配色对比、PDF 元数据、导出规划。 |
+| [scipilot-figure-skill](./skills/scipilot-figure-skill/) | [Haojae/scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill)（MIT） | 图表类型建议与可视化反模式清单。 |
+| [semantic-scholar](./skills/semantic-scholar/) | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（MIT，改编） | 用 Semantic Scholar 公开 API 查已发表会议/期刊论文与引用/TLDR。 |
+| [venue-deadlines](./skills/venue-deadlines/) | Iris / TalentOS | 跟踪官方 CFP 截稿（AoE 换算）与有出处的录用率。 |
+
 
 ### 安装
 
